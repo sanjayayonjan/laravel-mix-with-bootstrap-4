@@ -1,0 +1,108 @@
+$svg-icon-size: 3.75rem;
+$svg-icon-xs-size: 0.7rem;
+$svg-icon-sm-size: 1.4rem;
+$svg-icon-md-size: 2rem;
+$svg-icon-lg-size: 2.8rem;
+$svg-icon-xl-size: 6rem;
+$svg-icon-xxl-size: 16rem;
+$svg-icon-padding: 0 3.75rem;
+
+@mixin svg-fill-color($color) {
+  use {
+    fill: $color;
+    transition: fill .1s;
+
+    a:hover & {
+      fill: darken($color, 10%);
+    }
+  }
+}
+
+.ag-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: $svg-icon-size;
+  pointer-events: none;
+  vertical-align: baseline;
+  width: $svg-icon-size;
+
+  // Sizes
+  &--xs {
+    height: $svg-icon-xs-size;
+    width: $svg-icon-xs-size;
+  }
+
+  &--sm {
+    height: $svg-icon-sm-size;
+    width: $svg-icon-sm-size;
+  }
+
+  &--md {
+    height: $svg-icon-md-size;
+    width: $svg-icon-md-size;
+  }
+
+  &--lg {
+    height: $svg-icon-lg-size;
+    width: $svg-icon-lg-size;
+  }
+
+  &--xl {
+    height: $svg-icon-xl-size;
+    width: $svg-icon-xl-size;
+  }
+
+  &--xxl {
+    height: $svg-icon-xxl-size;
+    width: $svg-icon-xxl-size;
+  }
+
+  &--white {
+    @include svg-fill-color($white);
+  }
+
+  &--blue {
+    @include svg-fill-color($primary-color);
+  }
+
+  &--yellow {
+    @include svg-fill-color($secondary-color);
+  }
+
+  &--grey-light {
+    @include svg-fill-color($grey-light);
+  }
+
+  &--grey-medium {
+    @include svg-fill-color($grey-medium);
+  }
+
+  &--grey-dark {
+    @include svg-fill-color($grey-dark);
+  }
+
+  &--black {
+    @include svg-fill-color($black);
+  }
+
+  &--red {
+    @include svg-fill-color($red);
+  }
+
+  &--green {
+    @include svg-fill-color($green);
+  }
+
+  &--rotate-down {
+    transform: rotate(-90deg);
+  }
+
+  &--rotate-right {
+    transform: rotate(-180deg);
+  }
+}
+
+.ag-icon-massive {
+  height: 28rem;
+  width: 100%;
+}
